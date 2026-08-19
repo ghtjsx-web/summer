@@ -8,18 +8,6 @@ def main():
     if 'user_list' not in st.session_state:
         st.session_state.user_list = []
 
-    userkey = st.text_input('추가할 ID입력 하세요')
-    if st.button('ID 추가하기'):
-        if userkey:
-            st.session_state.user_list.append(userkey)
-            st.success(f'{userkey} 추가 완료 성공했습니다')
-
-    st.divider()
-    st.write('### 현재 누적된 세션리스트 목록')
-    st.write(st.session_state.user_list)
-
-    st.divider()
-    session_two.order() #함수호출
 
 main() #함수에서 세션기술
 
